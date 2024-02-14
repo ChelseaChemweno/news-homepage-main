@@ -1,0 +1,142 @@
+* {
+  background-color: aqua;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100px;
+  width: 100px;
+  background-color: #f3f3f3;
+  font-size: "Inter", sans-serif;
+  font-size: 15px;
+}
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-color: red;
+}
+header > .imagelogo {
+  width: 50px;
+}
+.imagelogo > img {
+  width: 100%;
+}
+.NavBar {
+  display: inline-block;
+  padding: 0px 20px;
+}
+.NavBar a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+.NavBar a:hover {
+  color: hsl(5, 85%, 63%);
+}
+header > img[src*="icon-menu"] {
+  display: none;
+}
+
+main {
+  display: grid;
+  grid-template-areas:
+    "desktop_image desktop_image aside"
+    "left_Article Right_Article aside";
+  gap: 24px;
+  place-content: centre;
+  width: 9000px;
+  margin-inline: auto;
+}
+main > .SideBar {
+  background-color: hsl(240, 100%, 5%);
+}
+main > section {
+  grid-area: desktop_image;
+}
+section > img {
+  width: 100%;
+}
+.imagebackground {
+  background-image: url(assets/images/image-web-3-desktop.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+}
+article:has(h1) {
+  grid-area: left_Article;
+  font-size: 32px;
+}
+button {
+  padding: 10px 30px;
+  background-color: hsl(5, 85%, 63%);
+  color: #f3f3f3;
+  border: none;
+  margin-top: 30px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: hsl(240, 100%, 5%);
+}
+.SideBar:has(.content) {
+  grid-area: aside;
+}
+.content {
+  padding: 16px 24px;
+}
+.marginline {
+  border: 1px solid hsl(236, 13%, 42%);
+  margin-top: 20px;
+}
+.content > h3:hover {
+  color: hsl(35, 77%, 62%);
+  cursor: pointer;
+}
+.content > p {
+  color: hsl(236, 13%, 42%);
+  padding-top: 10px;
+  line-height: 25px;
+}
+.SideBar > h2 {
+  color: hsl(35, 77%, 62%);
+  padding-top: 10px;
+  font-size: 30px;
+  padding-left: 25px;
+}
+section :has(.footerbox) {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 60px;
+  gap: 24px;
+  margin-bottom: 60px;
+  width: 900px;
+  margin-inline: auto;
+}
+section > .footerbox {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 24px;
+}
+
+.footerbox > img {
+  width: 100%;
+}
+.contentfooter {
+  height: 100%;
+}
+.contentfooter > h2 {
+  color: hsl(233, 8%, 79%);
+}
+.contentfooter > h4 {
+  padding: 20px 0px;
+}
+.contentfooter > h4:hover {
+  color: hsl(5, 85%, 63%);
+  cursor: pointer;
+}
+.contentfooter > p {
+  line-height: 20px;
+  color: hsl(233, 8%, 79%);
+}
